@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
+import { createRouter, createWebHistory, RouteRecordRaw ,createWebHashHistory} from "vue-router";
 import store from "../store/index";
 import permissionList from "@/utils/router-permission";
 
@@ -168,7 +168,7 @@ export const DynamicRoutes = [
 const routes: Array<RouteRecordRaw> = [...DynamicRoutes, ...CommonRoutes];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
 });
 
